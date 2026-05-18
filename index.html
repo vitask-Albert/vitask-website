@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VITA SK | Скло та склопакети</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0d1117;
+    color:white;
+    line-height:1.6;
+}
+
+/* NAVIGATION */
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(0,0,0,0.45);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.logo img{
+    height:70px;
+    width:auto;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#7dd3fc;
+}
+
+/* HERO */
+
+header{
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)),
+    url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1600&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero{
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:90px;
+    margin-bottom:20px;
+    letter-spacing:4px;
+}
+
+.hero p{
+    font-size:24px;
+    max-width:850px;
+    color:#dbeafe;
+    margin-bottom:35px;
+}
+
+.btn{
+    padding:16px 40px;
+    background:#7dd3fc;
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:50px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+}
+
+/* GENERAL */
+
+section{
+    padding:100px 10%;
+}
+
+.title{
+    text-align:center;
+    font-size:45px;
+    margin-bottom:60px;
+    color:#7dd3fc;
+}
+
+/* ABOUT */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:25px;
+}
+
+.about-text h3{
+    font-size:34px;
+    margin-bottom:25px;
+}
+
+/* SERVICES */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#161b22;
+    padding:35px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:#7dd3fc;
+}
+
+.card h3{
+    color:#7dd3fc;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+/* GALLERY */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+/* CONTACT */
+
+.contact{
+    background:#161b22;
+    padding:70px;
+    border-radius:25px;
+    text-align:center;
+}
+
+.contact h2{
+    color:#7dd3fc;
+    font-size:42px;
+    margin-bottom:25px;
+}
+
+.order-box{
+    margin-top:40px;
+    background:#0d1117;
+    padding:30px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.order-box h3{
+    color:#7dd3fc;
+    margin-bottom:20px;
+    font-size:28px;
+}
+
+/* FOOTER */
+
+footer{
+    background:black;
+    text-align:center;
+    padding:25px;
+    color:#aaa;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .hero h1{
+        font-size:55px;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .contact{
+        padding:40px 20px;
+    }
+
+    .logo img{
+        height:55px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <div class="logo">
+        <img src="logo.png" alt="VITA SK Logo">
+    </div>
+
+    <ul>
+        <li><a href="#about">Про нас</a></li>
+        <li><a href="#services">Послуги</a></li>
+        <li><a href="#gallery">Галерея</a></li>
+        <li><a href="#contact">Контакти</a></li>
+    </ul>
+
+</nav>
+
+<!-- HERO -->
+
+<header>
+
+    <div class="hero">
+
+        <h1>VITA SK</h1>
+
+        <p>
+            Професійна порізка скла та виробництво
+            якісних склопакетів в Україні.
+        </p>
+
+        <a href="#contact" class="btn">
+            Зв'язатися з нами
+        </a>
+
+    </div>
+
+</header>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <h2 class="title">Про нас</h2>
+
+    <div class="about">
+
+        <div class="about-text">
+
+            <h3>
+                Точність. Якість. Майбутнє.
+            </h3>
+
+            <p>
+                VITA SK — компанія з Чернівців,
+                яка спеціалізується на професійній
+                порізці скла та виготовленні склопакетів.
+            </p>
+
+            <br>
+
+            <p>
+                Ми використовуємо сучасне обладнання
+                та якісні матеріали для створення
+                надійних рішень для будівництва,
+                бізнесу та приватних клієнтів.
+            </p>
+
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop">
+
+    </div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+    <h2 class="title">Наші послуги</h2>
+
+    <div class="services">
+
+        <div class="card">
+            <h3>Порізка скла</h3>
+
+            <p>
+                Точна порізка скла
+                за індивідуальними розмірами.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Обробка скла</h3>
+
+            <p>
+                Професійна обробка
+                листового та спеціального скла.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Склопакети</h3>
+
+            <p>
+                Виготовлення та доставка
+                якісних склопакетів.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Premium Quality</h3>
+
+            <p>
+                Сучасне виробництво,
+                надійні матеріали
+                та професійний сервіс.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+    <h2 class="title">Галерея</h2>
+
+    <div class="gallery">
+
+        <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1200&auto=format&fit=crop">
+
+        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop">
+
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop">
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <div class="contact">
+
+        <h2>Контакти</h2>
+
+        <p>
+            📍 Yaroslava Mudroho 192Б,
+            Chernivtsi, Ukraine
+        </p>
+
+        <p>📞 +380 50 372 00 22</p>
+
+        <p>✉️ info@vitask.ua</p>
+
+        <div class="order-box">
+
+            <h3>Замовлення</h3>
+
+            <p>
+                Для замовлення скла або склопакетів
+                просимо приїхати до нашої компанії
+                або зателефонувати нам.
+            </p>
+
+            <br>
+
+            <p>
+                Наші спеціалісти допоможуть вам
+                вибрати потрібний продукт
+                та оформити замовлення.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    © 2026 VITA SK — Premium Glass Solutions
+</footer>
+
+</body>
+</html>
