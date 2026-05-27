@@ -1,36 +1,56 @@
-# VITA SK - Website
+# Vita SK — Website
 
-🪟 **Professional Glass Cutting & Window Package Manufacturing**
+Professionelle Website für **ТОВ «Віта СК»** — ein Glasverarbeitungs- und Spiegelunternehmen in Chernivtsi, Ukraine.
 
-## About
+## 🌐 Über die Website
 
-VITA SK is a company based in Chernivtsi, Ukraine, specializing in:
-- Professional glass cutting
-- Glass processing
-- Window package manufacturing
+Die Website präsentiert die Dienstleistungen und Produkte von Vita SK:
+- **Glasschnitt und -bearbeitung**
+- **Isolierverglasungen (Doppelgläser)**
+- **Buntglasfenster (Vitrails)**
+- **Spiegel**
+- **Gehärtetes Glas**
+- **Montageservice**
 
-## Features
+## 📁 Dateien
 
-✨ Modern, responsive design
-- Dark theme with accent colors
-- Mobile-friendly layout
-- Smooth scrolling navigation
-- Gallery section
-- Contact information
+- `index.html` — Hauptseite der Website (vollständig responsive)
 
-## How to Deploy on GitHub Pages
+## 🚀 Verwendung
 
-1. Go to your repository settings
-2. Scroll to **Pages** section
-3. Select `main` branch as source
-4. Save and wait for deployment
-5. Your site will be live at: `https://vitask-Albert.github.io/vitask-website/`
+### Lokal öffnen
+Einfach `index.html` in einem Browser öffnen.
 
-## Contact
+### Mit GitHub Pages hosten
+1. Gehe zu den Repository-Einstellungen
+2. Unter "Pages" aktiviere GitHub Pages
+3. Wähle "main" als Source Branch
+4. Die Website ist dann unter `https://vitask-Albert.github.io/vitask-website/` verfügbar
 
-📍 **Address:** Yaroslava Mudroho 192Б, Chernivtsi, Ukraine
-📞 **Phone:** +380 50 372 00 22
-✉️ **Email:** info@vitask.ua
+## 🎨 Features
+
+✅ Vollständig responsive Design (Mobile, Tablet, Desktop)  
+✅ Sticky Navigation  
+✅ Glatte Übergänge und Hover-Effekte  
+✅ Kontakt- und Anfragefunktion  
+✅ SEO-freundliche Struktur  
+✅ Schnelle Ladezeiten  
+
+## 📝 Anpassungen
+
+Um die Website anzupassen, bearbeite die `index.html`:
+- **Kontaktdaten**: Suche nach `+38 (0372) 590-564` oder `vita.sk.chernivtsi@gmail.com`
+- **Logo**: Ersetze `logo.png` durch dein eigenes Logo
+- **Farben**: Ändere `#0f2b5b` (Blau) für die Farbe
+- **Text**: Bearbeite beliebige Texte direkt im HTML
+
+## 📧 Kontakt
+
+**Vita SK**  
+📍 Chernivtsi, str. Getmana Doroshenko, 63  
+📞 +38 (0372) 590-564  
+✉️ vita.sk.chernivtsi@gmail.com  
 
 ---
-© 2026 VITA SK — Premium Glass Solutions
+
+*© 2026 ТОВ «Віта СК» — Alle Rechte vorbehalten.*
