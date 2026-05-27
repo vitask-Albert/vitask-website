@@ -29,6 +29,7 @@
         }
         .logo {
             max-width: 380px;
+            height: auto;
             margin: 0 auto;
             display: block;
         }
@@ -127,7 +128,61 @@
     <header>
         <div class="container">
             <div class="logo-container">
-                <img src="logo.png" alt="Vita SK Logo" class="logo">
+                <svg class="logo" viewBox="0 0 800 900" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <!-- Glass gradient -->
+                        <linearGradient id="glassGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#e8f4f8;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#ffffff;stop-opacity:0.95" />
+                            <stop offset="100%" style="stop-color:#a8d4ed;stop-opacity:1" />
+                        </linearGradient>
+                        <!-- Shine effect on glass -->
+                        <linearGradient id="shine" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.6" />
+                            <stop offset="50%" style="stop-color:#ffffff;stop-opacity:0.1" />
+                            <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+                        </linearGradient>
+                    </defs>
+                    
+                    <!-- Glass Panel Frame (3D shadow) -->
+                    <rect x="280" y="120" width="240" height="360" fill="#004080" rx="8" opacity="0.3" transform="translate(8,8)"/>
+                    
+                    <!-- Main Glass Panel -->
+                    <rect x="280" y="120" width="240" height="360" fill="url(#glassGradient)" stroke="#0066CC" stroke-width="8" rx="8"/>
+                    
+                    <!-- Glass shine -->
+                    <ellipse cx="350" cy="180" rx="60" ry="80" fill="url(#shine)"/>
+                    
+                    <!-- Vertical glass reflection lines -->
+                    <line x1="320" y1="150" x2="320" y2="450" stroke="white" stroke-width="2" opacity="0.4"/>
+                    
+                    <!-- B Letter (left, dark blue) -->
+                    <text x="180" y="340" font-family="Arial, sans-serif" font-size="180" font-weight="bold" fill="#0f2b5b">B</text>
+                    
+                    <!-- K Letter (right, dark blue) -->
+                    <text x="520" y="340" font-family="Arial, sans-serif" font-size="180" font-weight="bold" fill="#0f2b5b">K</text>
+                    
+                    <!-- Yellow accent arrow (right side) -->
+                    <polygon points="600,260 700,360 600,380" fill="#FFD700" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.2))"/>
+                    
+                    <!-- BITA text (dark blue) -->
+                    <text x="220" y="520" font-family="Arial, sans-serif" font-size="70" font-weight="bold" fill="#0f2b5b">BITA</text>
+                    
+                    <!-- CK text (yellow) -->
+                    <text x="540" y="520" font-family="Arial, sans-serif" font-size="70" font-weight="bold" fill="#FFD700">CK</text>
+                    
+                    <!-- Divider lines -->
+                    <line x1="150" y1="560" x2="310" y2="560" stroke="#0f2b5b" stroke-width="3"/>
+                    
+                    <!-- Ukrainian flag (blue and yellow) -->
+                    <rect x="325" y="550" width="20" height="12" fill="#0066CC"/>
+                    <rect x="345" y="550" width="20" height="12" fill="#FFD700"/>
+                    
+                    <line x1="375" y1="560" x2="550" y2="560" stroke="#0f2b5b" stroke-width="3"/>
+                    
+                    <!-- Tagline: СКЛО • ЯКІСТЬ • ДОВІРА -->
+                    <text x="400" y="630" font-family="Arial, sans-serif" font-size="24" font-weight="500" fill="#0066CC" text-anchor="middle" letter-spacing="2">СКЛО • ЯКІСТЬ • ДОВІРА</text>
+                </svg>
             </div>
             <p style="font-size:1.6rem; margin:15px 0 30px;">Скло • Вітражі • Дзеркала • Склопакети</p>
             <p style="font-size:1.2rem;">Чернівці • Якісна обробка скла з 2000 року</p>
@@ -205,7 +260,7 @@
         </div>
     </section>
 
-    <!-- Neuer Bestell-Tab -->
+    <!-- Bestell-Tab -->
     <section id="order" style="background:#f8f9fa;">
         <div class="container">
             <h2>Швидке замовлення</h2>
