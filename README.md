@@ -47,7 +47,7 @@ Um die Website anzupassen, bearbeite die `index.html`:
 ## 📧 Kontakt
 
 **Vita SK**  
-📍 Chernivtsi, str. Getmana Doroshenko, 63  
+📍 Chernivtsi, str. Ярослава Мудрого, 192Б, 63  
 📞 +38 (0372) 590-564  
 ✉️ vita.sk.chernivtsi@gmail.com  
 
