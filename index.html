@@ -20,46 +20,23 @@
             padding:100px 20px 80px; 
         }
         .logo {
-            max-width: 450px;
-            height: auto;
-            margin: 0 auto 30px;
+            max-width: 380px;
+            margin: 0 auto 20px;
             display: block;
-            filter: drop-shadow(0 6px 12px rgba(0,0,0,0.3));
         }
         .container { max-width: 1200px; margin:0 auto; padding:0 20px; }
         nav { 
             background:#0f2b5b; 
-            padding:12px 0; 
+            padding:15px 0; 
             position:sticky; 
             top:0; 
-            z-index:100;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-        }
-        nav .container {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-        }
-        nav .logo-nav {
-            height: 45px;
-            display: flex;
-            align-items: center;
-            margin-right: 10px;
-        }
-        nav .logo-nav svg {
-            height: 100%;
-            width: auto;
+            z-index:100; 
         }
         nav a { 
             color:white; 
+            margin:0 15px; 
             text-decoration:none; 
-            font-weight:500;
-            transition: all 0.3s;
-            font-size: 1rem;
-        }
-        nav a:hover {
-            color: #FFD700;
-            transform: translateY(-2px);
+            font-weight:500; 
         }
         section { padding:80px 0; }
         h2 { 
@@ -94,6 +71,18 @@
             border-bottom: 1px solid #eee;
             font-size: 1.1rem;
         }
+        form {
+            max-width: 700px;
+            margin: 0 auto;
+            display: grid;
+            gap: 15px;
+        }
+        input, textarea, select {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
         footer { 
             background:#0f2b5b; 
             color:white; 
@@ -107,22 +96,10 @@
             border:none; 
             border-radius:5px; 
             font-size:1.1rem; 
-            cursor:pointer;
-            transition: all 0.3s;
+            cursor:pointer; 
         }
         .btn:hover {
-            background: #FFD700;
-            color: #0f2b5b;
-            transform: translateY(-3px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-        .btn-secondary {
-            background: white;
-            color: #0f2b5b;
-        }
-        .btn-secondary:hover {
-            background: #FFD700;
-            color: #0f2b5b;
+            background:#1a4a8c;
         }
     </style>
 </head>
@@ -130,27 +107,10 @@
 
     <nav>
         <div class="container">
-            <div class="logo-nav">
-                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="navGlass" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8" />
-                            <stop offset="100%" style="stop-color:#b3d9f2;stop-opacity:0.8" />
-                        </linearGradient>
-                    </defs>
-                    <!-- Glass frame -->
-                    <rect x="28" y="15" width="30" height="40" fill="url(#navGlass)" stroke="#0066CC" stroke-width="1.5" rx="1"/>
-                    <!-- B Letter -->
-                    <text x="28" y="50" font-family="Arial, sans-serif" font-size="35" font-weight="bold" fill="#0f2b5b">B</text>
-                    <!-- K Letter -->
-                    <text x="62" y="50" font-family="Arial, sans-serif" font-size="35" font-weight="bold" fill="#0f2b5b">K</text>
-                    <!-- Yellow accent -->
-                    <polygon points="70,30 80,22 82,28" fill="#FFD700"/>
-                </svg>
-            </div>
             <a href="#">Vita SK</a>
             <a href="#services">Послуги</a>
             <a href="#glasarten">Види скла</a>
+            <a href="#order">Замовити</a>
             <a href="#about">Про нас</a>
             <a href="#contact">Контакти</a>
         </div>
@@ -158,62 +118,10 @@
 
     <header>
         <div class="container">
-            <!-- BITA CK Logo SVG with Glass Effect -->
-            <svg class="logo" viewBox="0 0 800 650" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <!-- Glass gradient -->
-                    <linearGradient id="glassGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#e8f4f8;stop-opacity:1" />
-                        <stop offset="50%" style="stop-color:#ffffff;stop-opacity:0.9" />
-                        <stop offset="100%" style="stop-color:#b3d9e8;stop-opacity:1" />
-                    </linearGradient>
-                    <!-- Shine effect -->
-                    <linearGradient id="shine" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.5" />
-                        <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
-                    </linearGradient>
-                </defs>
-                
-                <!-- 3D Glass Frame (Back) -->
-                <rect x="245" y="95" width="310" height="360" fill="#0066b3" rx="8" opacity="0.3"/>
-                
-                <!-- Main Glass Frame -->
-                <rect x="240" y="90" width="310" height="360" fill="url(#glassGradient)" stroke="#0066b3" stroke-width="6" rx="8"/>
-                
-                <!-- Glass shine effect -->
-                <ellipse cx="320" cy="180" rx="80" ry="100" fill="url(#shine)"/>
-                
-                <!-- B Letter (large, dark blue) -->
-                <text x="220" y="310" font-family="Arial, sans-serif" font-size="200" font-weight="bold" fill="#0f2b5b">B</text>
-                
-                <!-- K Letter (large, dark blue) -->
-                <text x="570" y="310" font-family="Arial, sans-serif" font-size="200" font-weight="bold" fill="#0f2b5b">K</text>
-                
-                <!-- Yellow accent (V-shaped) -->
-                <polygon points="640,200 730,320 800,250" fill="#FFD700" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.1))"/>
-                
-                <!-- "BITA" text -->
-                <text x="180" y="430" font-family="Arial, sans-serif" font-size="85" font-weight="bold" fill="#0f2b5b">BITA</text>
-                
-                <!-- "CK" text (yellow) -->
-                <text x="580" y="430" font-family="Arial, sans-serif" font-size="85" font-weight="bold" fill="#FFD700">CK</text>
-                
-                <!-- Divider line with Ukrainian flag -->
-                <line x1="180" y1="460" x2="340" y2="460" stroke="#0f2b5b" stroke-width="4"/>
-                
-                <!-- Ukrainian flag -->
-                <rect x="355" y="451" width="16" height="10" fill="#0066b3"/>
-                <rect x="371" y="451" width="16" height="10" fill="#FFD700"/>
-                
-                <line x1="395" y1="460" x2="550" y2="460" stroke="#0f2b5b" stroke-width="4"/>
-                
-                <!-- Tagline: "СКЛО • ЯКІСТЬ • ДОВІРА" -->
-                <text x="400" y="530" font-family="Arial, sans-serif" font-size="32" font-weight="500" fill="#0066b3" text-anchor="middle" letter-spacing="3">СКЛО • ЯКІСТЬ • ДОВІРА</text>
-            </svg>
-
+            <img src="logo.png" alt="Vita SK Logo" class="logo">
             <p style="font-size:1.6rem; margin:15px 0 30px;">Скло • Вітражі • Дзеркала • Склопакети</p>
             <p style="font-size:1.2rem;">Чернівці • Якісна обробка скла з 2000 року</p>
-            <a href="#contact"><button class="btn">Замовити розрахунок</button></a>
+            <a href="#order"><button class="btn">Замовити зараз</button></a>
         </div>
     </header>
 
@@ -287,12 +195,40 @@
         </div>
     </section>
 
+    <!-- Neuer Bestell-Tab -->
+    <section id="order" style="background:#f8f9fa;">
+        <div class="container">
+            <h2>Швидке замовлення</h2>
+            <form id="orderForm">
+                <input type="text" placeholder="Прізвище та ім'я *" required>
+                <input type="tel" placeholder="Телефон *" required>
+                <input type="email" placeholder="Email">
+                
+                <select required>
+                    <option value="">— Оберіть тип скла —</option>
+                    <option>Флоат-скло</option>
+                    <option>Гартоване скло</option>
+                    <option>Склопакет</option>
+                    <option>Дзеркало</option>
+                    <option>Вітраж</option>
+                    <option>Триплекс</option>
+                    <option>Інше</option>
+                </select>
+                
+                <input type="text" placeholder="Розміри (В x Ш в мм)">
+                <textarea rows="4" placeholder="Опишіть ваше замовлення (кількість, особливі побажання...)"></textarea>
+                
+                <button type="submit" class="btn" style="justify-self: center; padding: 14px 40px;">Надіслати замовлення</button>
+            </form>
+        </div>
+    </section>
+
     <section id="about">
         <div class="container">
             <h2>Про компанію</h2>
             <p style="font-size:1.2rem; line-height:1.8; max-width:800px; margin:0 auto; text-align:center;">
                 ТОВ «Віта СК» працює на ринку скла з 2000 року. Ми займаємося оптовою та роздрібною торгівлею, обробкою скла 
-                та виготовленням скляних конструкцій. Наша мета — висока якість матеріалів та професійний підхід до кожного клієнта.
+                та виготовленням скляних конструкцій. Наша мета — висока якість матеріалів та професійний підхід.
             </p>
             <p style="text-align:center; margin-top:30px; font-size:1.1rem;">
                 <strong>ЄДРПОУ:</strong> 31082884<br>
@@ -303,21 +239,26 @@
 
     <section id="contact" style="background:#0f2b5b; color:white;">
         <div class="container">
-            <h2 style="color:white;">Зв'яжіться з нами</h2>
+            <h2 style="color:white;">Контакти</h2>
             <p style="text-align:center; font-size:1.4rem;">
                 📞 <strong>+38 (0372) 590-564</strong><br><br>
                 ✉️ vita.sk.chernivtsi@gmail.com<br><br>
                 📍 Чернівці, вул. Гетьмана Дорошенка, 63
             </p>
-            <div style="text-align:center; margin-top:40px;">
-                <button onclick="alert('Дякуємо! Ми зв\'яжемося з вами найближчим часом.')" class="btn btn-secondary">Отримати консультацію</button>
-            </div>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2026 ТОВ «Віта СК» — Скло та вітражі в Чернівцях. Всі права захищені.</p>
     </footer>
+
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('✅ Дякуємо! Ваше замовлення отримано.\nМи зв\'яжемося з вами найближчим часом.');
+            this.reset();
+        });
+    </script>
 
 </body>
 </html>
