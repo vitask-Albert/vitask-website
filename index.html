@@ -23,6 +23,7 @@
             max-width: 380px;
             margin: 0 auto 20px;
             display: block;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
         }
         .container { max-width: 1200px; margin:0 auto; padding:0 20px; }
         nav { 
@@ -85,6 +86,11 @@
             border-radius:5px; 
             font-size:1.1rem; 
             cursor:pointer; 
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #1a3a7a;
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -102,7 +108,43 @@
 
     <header>
         <div class="container">
-            <img src="logo.png" alt="Vita SK Logo" class="logo">
+            <svg class="logo" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+                <!-- Glass panel with reflection -->
+                <defs>
+                    <linearGradient id="glassGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#E8F4FD;stop-opacity:1" />
+                        <stop offset="50%" style="stop-color:#FFFFFF;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#B3D9F2;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                
+                <!-- Glass panel -->
+                <g>
+                    <polygon points="330,170 530,170 530,610 330,610" fill="url(#glassGradient)" stroke="#0066CC" stroke-width="8"/>
+                    <!-- Glass shine effect -->
+                    <polygon points="340,180 480,180 480,300 340,320" fill="#FFFFFF" opacity="0.4"/>
+                </g>
+                
+                <!-- B letter (dark blue) -->
+                <text x="280" y="450" font-family="Arial, sans-serif" font-size="280" font-weight="bold" fill="#0B2D6B" text-anchor="middle">B</text>
+                
+                <!-- K letter (dark blue) -->
+                <text x="580" y="450" font-family="Arial, sans-serif" font-size="280" font-weight="bold" fill="#0B2D6B" text-anchor="middle">K</text>
+                
+                <!-- Yellow accent line -->
+                <polygon points="520,380 620,300 650,350 550,430" fill="#FFD700"/>
+                
+                <!-- Text: BITA CK -->
+                <text x="200" y="700" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="#0B2D6B">BITA</text>
+                <text x="520" y="700" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="#FFD700">CK</text>
+                
+                <!-- Ukrainian flag and text -->
+                <rect x="210" y="710" width="20" height="15" fill="#0066CC"/>
+                <rect x="230" y="710" width="20" height="15" fill="#FFD700"/>
+                
+                <!-- Tagline -->
+                <text x="400" y="765" font-family="Arial, sans-serif" font-size="36" fill="#0B2D6B" text-anchor="middle">СКЛО • ЯКІСТЬ • ДОВІРА</text>
+            </svg>
             <p style="font-size:1.6rem; margin:15px 0 30px;">Скло • Вітражі • Дзеркала • Склопакети</p>
             <p style="font-size:1.2rem;">Чернівці • Якісна обробка скла з 2000 року</p>
             <a href="#contact"><button class="btn">Замовити розрахунок</button></a>
