@@ -20,24 +20,46 @@
             padding:100px 20px 80px; 
         }
         .logo {
-            max-width: 380px;
-            margin: 0 auto 20px;
+            max-width: 450px;
+            height: auto;
+            margin: 0 auto 30px;
             display: block;
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+            filter: drop-shadow(0 6px 12px rgba(0,0,0,0.3));
         }
         .container { max-width: 1200px; margin:0 auto; padding:0 20px; }
         nav { 
             background:#0f2b5b; 
-            padding:15px 0; 
+            padding:12px 0; 
             position:sticky; 
             top:0; 
-            z-index:100; 
+            z-index:100;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+        nav .container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        nav .logo-nav {
+            height: 45px;
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+        nav .logo-nav svg {
+            height: 100%;
+            width: auto;
         }
         nav a { 
             color:white; 
-            margin:0 15px; 
             text-decoration:none; 
-            font-weight:500; 
+            font-weight:500;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+        nav a:hover {
+            color: #FFD700;
+            transform: translateY(-2px);
         }
         section { padding:80px 0; }
         h2 { 
@@ -85,12 +107,22 @@
             border:none; 
             border-radius:5px; 
             font-size:1.1rem; 
-            cursor:pointer; 
-            transition: 0.3s;
+            cursor:pointer;
+            transition: all 0.3s;
         }
         .btn:hover {
-            background: #1a3a7a;
-            transform: scale(1.05);
+            background: #FFD700;
+            color: #0f2b5b;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .btn-secondary {
+            background: white;
+            color: #0f2b5b;
+        }
+        .btn-secondary:hover {
+            background: #FFD700;
+            color: #0f2b5b;
         }
     </style>
 </head>
@@ -98,6 +130,24 @@
 
     <nav>
         <div class="container">
+            <div class="logo-nav">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="navGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8" />
+                            <stop offset="100%" style="stop-color:#b3d9f2;stop-opacity:0.8" />
+                        </linearGradient>
+                    </defs>
+                    <!-- Glass frame -->
+                    <rect x="28" y="15" width="30" height="40" fill="url(#navGlass)" stroke="#0066CC" stroke-width="1.5" rx="1"/>
+                    <!-- B Letter -->
+                    <text x="28" y="50" font-family="Arial, sans-serif" font-size="35" font-weight="bold" fill="#0f2b5b">B</text>
+                    <!-- K Letter -->
+                    <text x="62" y="50" font-family="Arial, sans-serif" font-size="35" font-weight="bold" fill="#0f2b5b">K</text>
+                    <!-- Yellow accent -->
+                    <polygon points="70,30 80,22 82,28" fill="#FFD700"/>
+                </svg>
+            </div>
             <a href="#">Vita SK</a>
             <a href="#services">Послуги</a>
             <a href="#glasarten">Види скла</a>
@@ -108,43 +158,59 @@
 
     <header>
         <div class="container">
-            <svg class="logo" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
-                <!-- Glass panel with reflection -->
+            <!-- BITA CK Logo SVG with Glass Effect -->
+            <svg class="logo" viewBox="0 0 800 650" xmlns="http://www.w3.org/2000/svg">
                 <defs>
+                    <!-- Glass gradient -->
                     <linearGradient id="glassGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#E8F4FD;stop-opacity:1" />
-                        <stop offset="50%" style="stop-color:#FFFFFF;stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:#B3D9F2;stop-opacity:1" />
+                        <stop offset="0%" style="stop-color:#e8f4f8;stop-opacity:1" />
+                        <stop offset="50%" style="stop-color:#ffffff;stop-opacity:0.9" />
+                        <stop offset="100%" style="stop-color:#b3d9e8;stop-opacity:1" />
+                    </linearGradient>
+                    <!-- Shine effect -->
+                    <linearGradient id="shine" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.5" />
+                        <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
                     </linearGradient>
                 </defs>
                 
-                <!-- Glass panel -->
-                <g>
-                    <polygon points="330,170 530,170 530,610 330,610" fill="url(#glassGradient)" stroke="#0066CC" stroke-width="8"/>
-                    <!-- Glass shine effect -->
-                    <polygon points="340,180 480,180 480,300 340,320" fill="#FFFFFF" opacity="0.4"/>
-                </g>
+                <!-- 3D Glass Frame (Back) -->
+                <rect x="245" y="95" width="310" height="360" fill="#0066b3" rx="8" opacity="0.3"/>
                 
-                <!-- B letter (dark blue) -->
-                <text x="280" y="450" font-family="Arial, sans-serif" font-size="280" font-weight="bold" fill="#0B2D6B" text-anchor="middle">B</text>
+                <!-- Main Glass Frame -->
+                <rect x="240" y="90" width="310" height="360" fill="url(#glassGradient)" stroke="#0066b3" stroke-width="6" rx="8"/>
                 
-                <!-- K letter (dark blue) -->
-                <text x="580" y="450" font-family="Arial, sans-serif" font-size="280" font-weight="bold" fill="#0B2D6B" text-anchor="middle">K</text>
+                <!-- Glass shine effect -->
+                <ellipse cx="320" cy="180" rx="80" ry="100" fill="url(#shine)"/>
                 
-                <!-- Yellow accent line -->
-                <polygon points="520,380 620,300 650,350 550,430" fill="#FFD700"/>
+                <!-- B Letter (large, dark blue) -->
+                <text x="220" y="310" font-family="Arial, sans-serif" font-size="200" font-weight="bold" fill="#0f2b5b">B</text>
                 
-                <!-- Text: BITA CK -->
-                <text x="200" y="700" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="#0B2D6B">BITA</text>
-                <text x="520" y="700" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="#FFD700">CK</text>
+                <!-- K Letter (large, dark blue) -->
+                <text x="570" y="310" font-family="Arial, sans-serif" font-size="200" font-weight="bold" fill="#0f2b5b">K</text>
                 
-                <!-- Ukrainian flag and text -->
-                <rect x="210" y="710" width="20" height="15" fill="#0066CC"/>
-                <rect x="230" y="710" width="20" height="15" fill="#FFD700"/>
+                <!-- Yellow accent (V-shaped) -->
+                <polygon points="640,200 730,320 800,250" fill="#FFD700" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.1))"/>
                 
-                <!-- Tagline -->
-                <text x="400" y="765" font-family="Arial, sans-serif" font-size="36" fill="#0B2D6B" text-anchor="middle">СКЛО • ЯКІСТЬ • ДОВІРА</text>
+                <!-- "BITA" text -->
+                <text x="180" y="430" font-family="Arial, sans-serif" font-size="85" font-weight="bold" fill="#0f2b5b">BITA</text>
+                
+                <!-- "CK" text (yellow) -->
+                <text x="580" y="430" font-family="Arial, sans-serif" font-size="85" font-weight="bold" fill="#FFD700">CK</text>
+                
+                <!-- Divider line with Ukrainian flag -->
+                <line x1="180" y1="460" x2="340" y2="460" stroke="#0f2b5b" stroke-width="4"/>
+                
+                <!-- Ukrainian flag -->
+                <rect x="355" y="451" width="16" height="10" fill="#0066b3"/>
+                <rect x="371" y="451" width="16" height="10" fill="#FFD700"/>
+                
+                <line x1="395" y1="460" x2="550" y2="460" stroke="#0f2b5b" stroke-width="4"/>
+                
+                <!-- Tagline: "СКЛО • ЯКІСТЬ • ДОВІРА" -->
+                <text x="400" y="530" font-family="Arial, sans-serif" font-size="32" font-weight="500" fill="#0066b3" text-anchor="middle" letter-spacing="3">СКЛО • ЯКІСТЬ • ДОВІРА</text>
             </svg>
+
             <p style="font-size:1.6rem; margin:15px 0 30px;">Скло • Вітражі • Дзеркала • Склопакети</p>
             <p style="font-size:1.2rem;">Чернівці • Якісна обробка скла з 2000 року</p>
             <a href="#contact"><button class="btn">Замовити розрахунок</button></a>
@@ -244,7 +310,7 @@
                 📍 Чернівці, вул. Гетьмана Дорошенка, 63
             </p>
             <div style="text-align:center; margin-top:40px;">
-                <button onclick="alert('Дякуємо! Ми зв\'яжемося з вами найближчим часом.')" class="btn" style="background:white; color:#0f2b5b;">Отримати консультацію</button>
+                <button onclick="alert('Дякуємо! Ми зв\'яжемося з вами найближчим часом.')" class="btn btn-secondary">Отримати консультацію</button>
             </div>
         </div>
     </section>
